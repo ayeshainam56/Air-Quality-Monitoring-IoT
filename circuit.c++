@@ -44,3 +44,9 @@ else if (sensorValue >= 500 && sensorValue <= 650)
     lcd.setCursor(0, 1);
     lcd.print("Poor Air");
   }
+  else if (sensorValue >= 650)
+  {
+    Serial.print("Very Poor Air");
+    Serial.print("\r\n");
+    lcd.setCursor(0, 1);
+    lcd.print("Very Poor Air");}
