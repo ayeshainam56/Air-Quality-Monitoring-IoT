@@ -18,3 +18,15 @@ void setup() {
   Serial.begin(9600);
   lcd.display();
 }
+void loop() {
+
+  delay(100);
+  sensorValue = analogRead(analogPin); // read the input pin
+  Serial.print("Air Quality in PPM = ");
+  Serial.println(sensorValue); // debug value
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Air Quality: ");
+  lcd.print(sensorValue);
+}
