@@ -30,3 +30,10 @@ void loop() {
   lcd.print("Air Quality: ");
   lcd.print(sensorValue);
 }
+if (sensorValue <= 500)
+  {
+    Serial.print("Fresh Air ");
+    Serial.print("\r\n");
+    lcd.setCursor(0, 1);
+    lcd.print("Fresh Air");
+  }
