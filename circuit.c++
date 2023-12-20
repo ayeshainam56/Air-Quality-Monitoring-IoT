@@ -17,7 +17,7 @@ void setup() {
   lcd.print("quality today?");
   Serial.begin(9600);
   lcd.display();
-}
+
 void loop() {
 
   delay(100);
@@ -49,4 +49,16 @@ else if (sensorValue >= 500 && sensorValue <= 650)
     Serial.print("Very Poor Air");
     Serial.print("\r\n");
     lcd.setCursor(0, 1);
-    lcd.print("Very Poor Air");}
+    lcd.print("Very Poor Air");
+    // Activate digital output and generate an alarm tone
+    digitalWrite(pin8, HIGH);
+    tone(pin8, 1000); // The Buzzer will generate an alarm tone.
+    delay(100);       // Sound ON for 100 msec.
+    noTone(pin8);
+    delay(100);       // Sound OFF for 100 msec.
+  }
+  else {
+    // Deactivate digital output
+    digitalWrite(pin8, LOW);
+  }
+}
