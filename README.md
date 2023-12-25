@@ -1,1 +1,2 @@
 # Air-Quality-Monitoring-IoT
+we propose a Air Quality Monitoring System which serves a robust solution to address the ever-escalating issue of air pollution in Pakistan in recent years. By incorporating modern sensor technology, a user-friendly interface, and efficient communication protocols, the system offers quality monitoring, alerts, and data analysis. Through proactive measures and optimized power usage, this project is a small effort towards responsible technology use in creating a healthier and more informed society.
